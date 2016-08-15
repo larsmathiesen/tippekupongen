@@ -1,16 +1,34 @@
 ---
 layout: page
-title: About me
-subtitle: Why you'd want to go on a date with me
+title: Uke 32 - 2016
+subtitle: 8. august - 14. august
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+{% for it in site.data.2016_32_1 %}
+<div class="col-md-12">
+	<p>{{it[0]}} - {{it[1].dato}}</p>
+<div class="col-md-12">
+Full tid
+<table>
+		<tr>
+			<th>#</th>
+			<th>Lag</th>
+			<th>Pause</th>
+			<th>Resultat</th>
+			
+		</tr>
+		{% for match in it[1].Matches %}
+			<tr>
+				<td>{{match[0]}}</td>
+				<td>{{match[1].Hometeam}} -  {{match[1].Awayteam}}</td>
+				<td>{{match[1].PauseResult}} B</td>
+				<td>{{match[1].Result}}  H</td>
+				
+			</tr>
+		{% endfor %}
+	</table>
+</div>
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+</div>
 
-What else do you need?
-
-### my history
-
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](http://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+{% endfor %}
