@@ -172,5 +172,10 @@ prose:
 gems:
   - jekyll-paginate
 
+collections:
+  tipping:
+    output: true
+    permalink: /:collection/:title.html
+
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189
