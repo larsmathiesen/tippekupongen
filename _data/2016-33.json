@@ -1,62 +1,34 @@
 {
-  "Midtuke": {
-    "dato": "12.12.2014 uke 33",
+  "dag":"Midtuke",
+  "dato": "12.12.2014 uke 33",
 	"Matches":
 		{
 			"1":
 			{
 				"Hometeam": "Brann",
 				"Awayteam": "Viking",
-				"Result": "8-1",
-				"PauseResult": "0-1"
+				"Result": "8 - 1",
+				"PauseResult": "0 - 1",
+        "PauseMarkering": "B",
+        "ResultatMarkering": "H"
 			},
 			"2":
 			{
 				"Hometeam": "Sogndal",
 				"Awayteam": "Odd",
-				"Result": "1-4",
-				"PauseResult": "1-3"
-			}
-		}
-  },
-  "Lordag": {
-    "dato": "14.12.2014",
-	"Matches":
-		{
-			"1":
-			{
-				"Hometeam": "Start",
-				"Awayteam": "Vard",
-				"Result": "1-1",
-				"PauseResult": "0-1"
+				"Result": "1 - 4",
+				"PauseResult": "1 - 3",
+        "PauseMarkering": "B",
+        "ResultatMarkering": "B"
 			},
-			"2":
+			"3":
 			{
-				"Hometeam": "Bjarg",
-				"Awayteam": "Lyn",
-				"Result": "3-2",
-				"PauseResult": "2-0"
+				"Hometeam": "AAA",
+				"Awayteam": "BBB",
+				"Result": "3 - 3",
+				"PauseResult": "2 - 0",
+        "PauseMarkering": "H",
+        "ResultatMarkering": "U"
 			}
 		}
-  },
-  "Søndag": {
-    "dato": "14.12.2014",
-	"Matches":
-		{
-			"1":
-			{
-				"Hometeam": "Start",
-				"Awayteam": "Vard",
-				"Result": "1-6",
-				"PauseResult": "0-4"
-			},
-			"2":
-			{
-				"Hometeam": "Bodø",
-				"Awayteam": "Lyn",
-				"Result": "3-2",
-				"PauseResult": "2-0"
-			}
-		}
-  }
 }

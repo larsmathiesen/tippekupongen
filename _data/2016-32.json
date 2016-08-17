@@ -8,14 +8,18 @@
 				"Hometeam": "Brann",
 				"Awayteam": "Viking",
 				"Result": "2-1",
-				"PauseResult": "0-1"
+				"PauseResult": "0-1",
+        "PauseMarkering": "B",
+        "ResultatMarkering": "H"
 			},
 			"2":
 			{
 				"Hometeam": "Sogndal",
 				"Awayteam": "Odd",
 				"Result": "1-4",
-				"PauseResult": "1-3"
+				"PauseResult": "1-3",
+        "PauseMarkering": "B",
+        "ResultatMarkering": "H"
 			}
 		}
   },
@@ -28,14 +32,18 @@
 				"Hometeam": "Start",
 				"Awayteam": "Vard",
 				"Result": "1-1",
-				"PauseResult": "0-1"
+				"PauseResult": "0-1",
+        "PauseMarkering": "B",
+        "ResultatMarkering": "H"
 			},
 			"2":
 			{
 				"Hometeam": "Bjarg",
 				"Awayteam": "Lyn",
 				"Result": "3-2",
-				"PauseResult": "2-0"
+				"PauseResult": "2-0",
+        "PauseMarkering": "B",
+        "ResultatMarkering": "H"
 			}
 		}
   },
@@ -48,14 +56,18 @@
 				"Hometeam": "Start",
 				"Awayteam": "Vard",
 				"Result": "1-6",
-				"PauseResult": "0-4"
+				"PauseResult": "0-4",
+        "PauseMarkering": "B",
+        "ResultatMarkering": "H"
 			},
 			"2":
 			{
 				"Hometeam": "Bodø",
 				"Awayteam": "Lyn",
 				"Result": "3-2",
-				"PauseResult": "2-0"
+				"PauseResult": "2-0",
+        "PauseMarkering": "B",
+        "ResultatMarkering": "H"
 			}
 		}
   }

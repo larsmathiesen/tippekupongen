@@ -1,0 +1,82 @@
+<div class="row " style="padding-left: 5px;">
+  <canvas id="myCanvas1-{{include.matchno}}" width="20" height="20"></canvas>
+  <canvas id="myCanvas2-{{include.matchno}}" width="20" height="20"></canvas>
+  <canvas id="myCanvas3-{{include.matchno}}" width="20" height="20"></canvas>
+<script>
+var canvas = document.getElementById('myCanvas1-{{include.matchno}}');
+var context = canvas.getContext('2d');
+
+context.globalAlpha=1;
+context.beginPath();
+context.rect(0, 0, 20, 20);
+context.fillStyle = 'white';
+context.fill();
+context.lineWidth = 1;
+context.strokeStyle = 'green';
+context.stroke();
+
+context.globalAlpha=0.5;
+context.fillStyle = 'green';
+context.font="14px Arial";
+context.fillText("H",5,15);
+
+var canvas2 = document.getElementById('myCanvas2-{{include.matchno}}');
+var context2 = canvas2.getContext('2d');
+
+context2.globalAlpha=1;
+context2.beginPath();
+context2.rect(0, 0, 20, 20);
+context2.fillStyle = 'white';
+context2.fill();
+context2.lineWidth = 1;
+context2.strokeStyle = 'green';
+context2.stroke();
+
+context2.globalAlpha= 0.5;
+context2.fillStyle = 'green';
+context2.font="14px Arial";
+context2.fillText("U",5,15);
+
+var canvas3 = document.getElementById('myCanvas3-{{include.matchno}}');
+var context3 = canvas3.getContext('2d');
+
+context3.globalAlpha=1;
+context3.beginPath();
+context3.rect(0, 0, 20, 20);
+context3.fillStyle = 'white';
+context3.fill();
+context3.lineWidth = 1;
+context3.strokeStyle = 'green';
+context3.stroke();
+
+context3.globalAlpha=0.5;
+context3.fillStyle = 'green';
+context3.font="14px Arial";
+context3.fillText("B",5,15);
+
+{% if include.markering == "H" %}
+  drawX(context,10,10);
+{% endif %}
+
+{% if include.markering == "U" %}
+  drawX(context2,10,10);
+{% endif %}
+
+{% if include.markering == "B" %}
+  drawX(context3,10,10);
+{% endif %}
+
+function drawX(ctx,x, y) {
+    ctx.beginPath();
+    ctx.lineWidth = 2;
+    ctx.moveTo(x - 20, y - 20);
+    ctx.lineTo(x + 20, y + 20);
+    ctx.stroke();
+
+    ctx.moveTo(x + 20, y - 20);
+    ctx.lineTo(x - 20, y + 20);
+    ctx.stroke();
+}
+</script>
+
+</div>

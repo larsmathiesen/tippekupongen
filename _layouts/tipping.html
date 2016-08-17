@@ -15,23 +15,37 @@ layout: base
       {% for it in comments %}
 
       <div class="col-md-12">
-      	<p>{{it[0]}} - {{it[1].dato}}</p>
+      	{{it[0]}} - {{it[1].dato}}
       <div class="col-md-12">
-      Full tid
-      <table>
+      <table class="">
       		<tr>
-      			<th>#</th>
-      			<th>Lag</th>
-      			<th>Pause</th>
-      			<th>Resultat</th>
+      			<!--<th col-md-4>#</th>-->
+      			<th class="col-md-8">Lag</th>
+      			<th class="col-md-1">Pause</th>
+      			<th class="col-md-1">Slutt</th>
+            <th class="col-md-1">Pause</th>
+            <th class="col-md-1">Slutt</th>
 
       		</tr>
       		{% for match in it[1].Matches %}
+
+            {% assign matchNumberP = {{match[0]}} | append: '-p' %}
+            {% assign matchNumberF = {{match[0]}} | append: '-f' %}
+
+            {% assign pauseMarkering = {{match[1].PauseMarkering}}  %}
+            {% assign resultatMarkering = {{match[1].ResultatMarkering}}  %}
+
       			<tr>
-      				<td>{{match[0]}}</td>
-      				<td>{{match[1].Hometeam}} -  {{match[1].Awayteam}}</td>
-      				<td>{{match[1].PauseResult}} B</td>
-      				<td>{{match[1].Result}}  H</td>
+
+      				<td >{{match[0]}}. {{match[1].Hometeam}} -  {{match[1].Awayteam}}</td>
+      				<td class="text-center">{{match[1].PauseResult}}</td>
+      				<td class="text-center">{{match[1].Result}}</td>
+              <td>
+                    {% include canvas-hub.html markering=pauseMarkering matchno=matchNumberP %}
+              </td>
+              <td>
+                    {% include canvas-hub.html markering=resultatMarkering matchno=matchNumberF %}
+              </td>
 
       			</tr>
       		{% endfor %}
