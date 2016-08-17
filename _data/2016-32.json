@@ -1,6 +1,6 @@
 {
-  "Midtuke": {
-    "dato": "12.12.2014",
+  "dag":"Midtuke",
+  "dato": "12.12.2014",
 	"Matches":
 		{
 			"1":
@@ -22,53 +22,6 @@
         "ResultatMarkering": "H"
 			}
 		}
-  },
-  "Lordag": {
-    "dato": "14.12.2014",
-	"Matches":
-		{
-			"1":
-			{
-				"Hometeam": "Start",
-				"Awayteam": "Vard",
-				"Result": "1-1",
-				"PauseResult": "0-1",
-        "PauseMarkering": "B",
-        "ResultatMarkering": "H"
-			},
-			"2":
-			{
-				"Hometeam": "Bjarg",
-				"Awayteam": "Lyn",
-				"Result": "3-2",
-				"PauseResult": "2-0",
-        "PauseMarkering": "B",
-        "ResultatMarkering": "H"
-			}
-		}
-  },
-  "Søndag": {
-    "dato": "14.12.2014",
-	"Matches":
-		{
-			"1":
-			{
-				"Hometeam": "Start",
-				"Awayteam": "Vard",
-				"Result": "1-6",
-				"PauseResult": "0-4",
-        "PauseMarkering": "B",
-        "ResultatMarkering": "H"
-			},
-			"2":
-			{
-				"Hometeam": "Bodø",
-				"Awayteam": "Lyn",
-				"Result": "3-2",
-				"PauseResult": "2-0",
-        "PauseMarkering": "B",
-        "ResultatMarkering": "H"
-			}
-		}
+
   }
 }

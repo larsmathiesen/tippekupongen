@@ -10,51 +10,51 @@ layout: base
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
 
-      {% assign comments = {{site.data.[page.resultfilename]}} %}
+      {% assign data = {{site.data.[page.resultfilename]}} %}
 
-      {% for it in comments %}
+
 
       <div class="col-md-12">
-      	{{it[0]}} - {{it[1].dato}}
-      <div class="col-md-12">
-      <table class="">
-      		<tr>
-      			<!--<th col-md-4>#</th>-->
-      			<th class="col-md-8">Lag</th>
-      			<th class="col-md-1">Pause</th>
-      			<th class="col-md-1">Slutt</th>
-            <th class="col-md-1">Pause</th>
-            <th class="col-md-1">Slutt</th>
+      	{{data.dag}} - {{data.dato}}
+          <div class="col-md-12">
+          <table class="">
+          		<tr>
+          			<!--<th col-md-4>#</th>-->
+          			<th class="col-md-8">Lag</th>
+          			<th class="col-md-1">Pause</th>
+          			<th class="col-md-1">Slutt</th>
+                <th class="col-md-1">Pause</th>
+                <th class="col-md-1">Slutt</th>
 
-      		</tr>
-      		{% for match in it[1].Matches %}
+          		</tr>
+          		{% for match in data.Matches %}
 
-            {% assign matchNumberP = {{match[0]}} | append: '-p' %}
-            {% assign matchNumberF = {{match[0]}} | append: '-f' %}
+                {% assign matchNumberP = {{match[0]}} | append: '-p' %}
+                {% assign matchNumberF = {{match[0]}} | append: '-f' %}
 
-            {% assign pauseMarkering = {{match[1].PauseMarkering}}  %}
-            {% assign resultatMarkering = {{match[1].ResultatMarkering}}  %}
+                {% assign pauseMarkering = {{match[1].PauseMarkering}}  %}
+                {% assign resultatMarkering = {{match[1].ResultatMarkering}}  %}
 
-      			<tr>
+          			<tr>
 
-      				<td >{{match[0]}}. {{match[1].Hometeam}} -  {{match[1].Awayteam}}</td>
-      				<td class="text-center">{{match[1].PauseResult}}</td>
-      				<td class="text-center">{{match[1].Result}}</td>
-              <td>
-                    {% include canvas-hub.html markering=pauseMarkering matchno=matchNumberP %}
-              </td>
-              <td>
-                    {% include canvas-hub.html markering=resultatMarkering matchno=matchNumberF %}
-              </td>
+          				<td >{{match[0]}}. {{match[1].Hometeam}} -  {{match[1].Awayteam}}</td>
+          				<td class="text-center">{{match[1].PauseResult}}</td>
+          				<td class="text-center">{{match[1].Result}}</td>
+                  <td>
+                        {% include canvas-hub.html markering=pauseMarkering matchno=matchNumberP %}
+                  </td>
+                  <td>
+                        {% include canvas-hub.html markering=resultatMarkering matchno=matchNumberF %}
+                  </td>
 
-      			</tr>
-      		{% endfor %}
-      	</table>
+          			</tr>
+          		{% endfor %}
+          	</table>
+          </div>
+
       </div>
 
-      </div>
 
-      {% endfor %}
 
 
 
